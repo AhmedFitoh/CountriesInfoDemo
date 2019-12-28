@@ -25,6 +25,8 @@
 		9CAFCCA423B74B0400ABFA77 /* AddScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCC9323B74B0400ABFA77 /* AddScreenInteractor.swift */; };
 		9CAFCCA523B74B0400ABFA77 /* AddScreenInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCC9423B74B0400ABFA77 /* AddScreenInteractorProtocols.swift */; };
 		9CAFCCA623B74B0400ABFA77 /* AddScreenInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCC9423B74B0400ABFA77 /* AddScreenInteractorProtocols.swift */; };
+		9CAFCCAE23B7584A00ABFA77 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCCAD23B7584A00ABFA77 /* Country.swift */; };
+		9CAFCCAF23B7584A00ABFA77 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCCAD23B7584A00ABFA77 /* Country.swift */; };
 		9CD3D27D23B6596C001ED099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3D27C23B6596C001ED099 /* AppDelegate.swift */; };
 		9CD3D28523B6596C001ED099 /* CountriesInfoDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3D28323B6596C001ED099 /* CountriesInfoDemo.xcdatamodeld */; };
 		9CD3D28723B6596D001ED099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3D28623B6596D001ED099 /* Assets.xcassets */; };
@@ -72,6 +74,7 @@
 		9CAFCC9123B74B0400ABFA77 /* AddScreenViewProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScreenViewProtocols.swift; sourceTree = "<group>"; };
 		9CAFCC9323B74B0400ABFA77 /* AddScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScreenInteractor.swift; sourceTree = "<group>"; };
 		9CAFCC9423B74B0400ABFA77 /* AddScreenInteractorProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScreenInteractorProtocols.swift; sourceTree = "<group>"; };
+		9CAFCCAD23B7584A00ABFA77 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		9CD3D27923B6596C001ED099 /* CountriesInfoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesInfoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD3D27C23B6596C001ED099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD3D28423B6596C001ED099 /* CountriesInfoDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountriesInfoDemo.xcdatamodel; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 		9CAFCC8723B74B0400ABFA77 /* AddScreen */ = {
 			isa = PBXGroup;
 			children = (
+				9CAFCCAC23B7583500ABFA77 /* Model */,
 				9CAFCC8823B74B0400ABFA77 /* Presenter */,
 				9CAFCC8B23B74B0400ABFA77 /* Wireframe */,
 				9CAFCC8E23B74B0400ABFA77 /* View */,
@@ -157,6 +161,14 @@
 				9CAFCC9423B74B0400ABFA77 /* AddScreenInteractorProtocols.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9CAFCCAC23B7583500ABFA77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9CAFCCAD23B7584A00ABFA77 /* Country.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9CD3D27023B6596C001ED099 = {
@@ -392,6 +404,7 @@
 				9CAFCCA523B74B0400ABFA77 /* AddScreenInteractorProtocols.swift in Sources */,
 				9CD3D2DB23B661AA001ED099 /* HomeScreenPresenter.swift in Sources */,
 				9CD3D27D23B6596C001ED099 /* AppDelegate.swift in Sources */,
+				9CAFCCAE23B7584A00ABFA77 /* Country.swift in Sources */,
 				9CAFCCA323B74B0400ABFA77 /* AddScreenInteractor.swift in Sources */,
 				9CAFCCA123B74B0400ABFA77 /* AddScreenViewProtocols.swift in Sources */,
 				9CD3D2E323B661AA001ED099 /* HomeScreenView.swift in Sources */,
@@ -418,6 +431,7 @@
 				9CD3D2EC23B661AA001ED099 /* HomeScreenInteractorProtocols.swift in Sources */,
 				9CAFCC9A23B74B0400ABFA77 /* AddScreenWireframeProtocols.swift in Sources */,
 				9CD3D2E823B661AA001ED099 /* HomeScreenViewProtocols.swift in Sources */,
+				9CAFCCAF23B7584A00ABFA77 /* Country.swift in Sources */,
 				9CD3D2EA23B661AA001ED099 /* HomeScreenInteractor.swift in Sources */,
 				9CD3D2DC23B661AA001ED099 /* HomeScreenPresenter.swift in Sources */,
 				9CD3D2E023B661AA001ED099 /* HomeScreenWireframeProtocols.swift in Sources */,

@@ -13,10 +13,12 @@ protocol AddScreenDelegate: class {
 
 // VIPER Protocol for communication from Interactor -> Presenter
 protocol AddScreenInteractorToPresenterProtocol: class {
-    
+    func unexpectedErrorOccurred ()
+    func searchSucceded (With list: Countries)
 }
 
 // VIPER Protocol for communication from View -> Presenter
 protocol AddScreenViewToPresenterProtocol: class {
-    
+    func searchInputHasChanged (to searchText: String)
+    func userSelected (country: Country)
 }

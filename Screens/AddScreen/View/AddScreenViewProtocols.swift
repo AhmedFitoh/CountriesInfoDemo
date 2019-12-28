@@ -8,5 +8,6 @@
 
 // VIPER Protocol for communication from Presenter -> View
 protocol AddScreenPresenterToViewProtocol: class {
-    
+    func showUnexpectedErrorAlert ()
+    func showCountries (list: Countries)
 }

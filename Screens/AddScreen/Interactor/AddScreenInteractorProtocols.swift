@@ -8,5 +8,5 @@
 
 // VIPER Protocol for communication from Presenter to Interactor
 protocol AddScreenPresenterToInteractorProtocol: class {
-    
+    func requestCountries (containText searchString: String)
 }
