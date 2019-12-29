@@ -27,6 +27,9 @@
 		9CAFCCA623B74B0400ABFA77 /* AddScreenInteractorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCC9423B74B0400ABFA77 /* AddScreenInteractorProtocols.swift */; };
 		9CAFCCAE23B7584A00ABFA77 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCCAD23B7584A00ABFA77 /* Country.swift */; };
 		9CAFCCAF23B7584A00ABFA77 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCCAD23B7584A00ABFA77 /* Country.swift */; };
+		9CAFCCB023B9252800ABFA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3D27C23B6596C001ED099 /* AppDelegate.swift */; };
+		9CAFCCB523B9413700ABFA77 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCCB423B9413700ABFA77 /* CacheManager.swift */; };
+		9CAFCCB623B9413700ABFA77 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CAFCCB423B9413700ABFA77 /* CacheManager.swift */; };
 		9CD3D27D23B6596C001ED099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3D27C23B6596C001ED099 /* AppDelegate.swift */; };
 		9CD3D28523B6596C001ED099 /* CountriesInfoDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9CD3D28323B6596C001ED099 /* CountriesInfoDemo.xcdatamodeld */; };
 		9CD3D28723B6596D001ED099 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CD3D28623B6596D001ED099 /* Assets.xcassets */; };
@@ -75,6 +78,7 @@
 		9CAFCC9323B74B0400ABFA77 /* AddScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScreenInteractor.swift; sourceTree = "<group>"; };
 		9CAFCC9423B74B0400ABFA77 /* AddScreenInteractorProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddScreenInteractorProtocols.swift; sourceTree = "<group>"; };
 		9CAFCCAD23B7584A00ABFA77 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		9CAFCCB423B9413700ABFA77 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		9CD3D27923B6596C001ED099 /* CountriesInfoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountriesInfoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CD3D27C23B6596C001ED099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CD3D28423B6596C001ED099 /* CountriesInfoDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountriesInfoDemo.xcdatamodel; sourceTree = "<group>"; };
@@ -171,9 +175,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9CAFCCB323B9412400ABFA77 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9CAFCCB423B9413700ABFA77 /* CacheManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		9CD3D27023B6596C001ED099 = {
 			isa = PBXGroup;
 			children = (
+				9CAFCCB323B9412400ABFA77 /* Common */,
 				9CD3D2C423B65B18001ED099 /* Screens */,
 				9CD3D2C323B65A6F001ED099 /* AppInfo */,
 				9CD3D27B23B6596C001ED099 /* Resources */,
@@ -410,6 +423,7 @@
 				9CD3D2E323B661AA001ED099 /* HomeScreenView.swift in Sources */,
 				9CD3D2DD23B661AA001ED099 /* HomeScreenPresenterProtocols.swift in Sources */,
 				9CD3D2C823B660D0001ED099 /* RootWireframe.swift in Sources */,
+				9CAFCCB523B9413700ABFA77 /* CacheManager.swift in Sources */,
 				9CAFCC9923B74B0400ABFA77 /* AddScreenWireframeProtocols.swift in Sources */,
 				9CD3D2E923B661AA001ED099 /* HomeScreenInteractor.swift in Sources */,
 				9CD3D2DF23B661AA001ED099 /* HomeScreenWireframeProtocols.swift in Sources */,
@@ -432,10 +446,12 @@
 				9CAFCC9A23B74B0400ABFA77 /* AddScreenWireframeProtocols.swift in Sources */,
 				9CD3D2E823B661AA001ED099 /* HomeScreenViewProtocols.swift in Sources */,
 				9CAFCCAF23B7584A00ABFA77 /* Country.swift in Sources */,
+				9CAFCCB023B9252800ABFA77 /* AppDelegate.swift in Sources */,
 				9CD3D2EA23B661AA001ED099 /* HomeScreenInteractor.swift in Sources */,
 				9CD3D2DC23B661AA001ED099 /* HomeScreenPresenter.swift in Sources */,
 				9CD3D2E023B661AA001ED099 /* HomeScreenWireframeProtocols.swift in Sources */,
 				9CAFCCA623B74B0400ABFA77 /* AddScreenInteractorProtocols.swift in Sources */,
+				9CAFCCB623B9413700ABFA77 /* CacheManager.swift in Sources */,
 				9CD3D2E223B661AA001ED099 /* HomeScreenWireframe.swift in Sources */,
 				9CD3D29523B6596D001ED099 /* CountriesInfoDemoTests.swift in Sources */,
 				9CAFCC9C23B74B0400ABFA77 /* AddScreenWireframe.swift in Sources */,

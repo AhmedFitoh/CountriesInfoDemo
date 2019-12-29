@@ -10,4 +10,5 @@
 protocol AddScreenPresenterToViewProtocol: class {
     func showUnexpectedErrorAlert ()
     func showCountries (list: Countries)
+    func loadingIndicator (isHidden: Bool)
 }

@@ -14,7 +14,7 @@ protocol AddScreenDelegate: class {
 // VIPER Protocol for communication from Interactor -> Presenter
 protocol AddScreenInteractorToPresenterProtocol: class {
     func unexpectedErrorOccurred ()
-    func searchSucceded (With list: Countries)
+    func searchSucceeded (With list: Countries)
 }
 
 // VIPER Protocol for communication from View -> Presenter

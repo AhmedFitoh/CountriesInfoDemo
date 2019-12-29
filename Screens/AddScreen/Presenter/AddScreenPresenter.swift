@@ -30,25 +30,24 @@ class AddScreenPresenter {
 // MARK: - Interactor to Presenter Protocol
 extension AddScreenPresenter: AddScreenInteractorToPresenterProtocol {
     func unexpectedErrorOccurred() {
-        DispatchQueue.main.async { [weak self] in
-            self?.view.showUnexpectedErrorAlert()
-        }
-    }
+            view.showUnexpectedErrorAlert()
+            view.loadingIndicator(isHidden: true)
+     }
     
-    func searchSucceded(With list: Countries) {
-        DispatchQueue.main.async { [weak self] in
-            self?.view.showCountries(list: list)
-        }
+    func searchSucceeded(With list: Countries) {
+            view.showCountries(list: list)
+            view.loadingIndicator(isHidden: true)
     }
 }
 
 // MARK: - View to Presenter Protocol
 extension AddScreenPresenter: AddScreenViewToPresenterProtocol {
     func userSelected(country: Country) {
-        
+        interactor.saveChangesFor(country: country)
     }
     
     func searchInputHasChanged(to searchText: String) {
+         view.loadingIndicator(isHidden: false)
          interactor.requestCountries(containText: searchText)
     }
     

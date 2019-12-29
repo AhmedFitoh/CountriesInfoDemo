@@ -71,6 +71,9 @@ extension AddScreenView: AddScreenPresenterToViewProtocol {
         present(alertController, animated: true)
     }
  
+    func loadingIndicator (isHidden: Bool){
+        UIApplication.shared.isNetworkActivityIndicatorVisible = !isHidden
+    }
 }
 
 
@@ -94,12 +97,15 @@ extension AddScreenView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier) ??  UITableViewCell ()
         cell.textLabel?.text = countriesList [indexPath.row].name
+        cell.accessoryType = countriesList [indexPath.row].userChoice ? .checkmark : .none
         return cell
     }
 }
 
 extension AddScreenView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        countriesList [indexPath.row].userChoice.toggle()
+        tableView.reloadRows(at: [indexPath], with: .none)
         presenter.userSelected(country: countriesList [indexPath.row])
     }
 }
