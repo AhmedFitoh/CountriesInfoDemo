@@ -1,8 +1,7 @@
 //
 //  AddScreenInteractorProtocols.swift
-//  iOS-Viper-Architecture
 //
-//  Created by Nagwa on 12/28/19.
+//  Created by AhmedFitoh on 12/28/19.
 //  Copyright © 2019 AhmedFitoh. All rights reserved.
 //
 

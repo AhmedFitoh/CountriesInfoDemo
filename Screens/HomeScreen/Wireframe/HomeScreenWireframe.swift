@@ -1,8 +1,7 @@
 //
 //  HomeScreenWireframe.swift
-//  iOS-Viper-Architecture
 //
-//  Created by Nagwa on 12/27/19.
+//  Created by AhmedFitoh on 12/27/19.
 //  Copyright © 2019 AhmedFitoh. All rights reserved.
 //
 
@@ -41,7 +40,9 @@ class HomeScreenWireframe {
 // MARK: - Presenter to Wireframe Protocol
 extension HomeScreenWireframe: HomeScreenPresenterToWireframeProtocol {
     func openCountryDetailsScreen(with country: Country) {
-        
+        let detailsScreenWireframe = DetailsScreenWireframe(country: country)
+        viewController.navigationController?.pushViewController(detailsScreenWireframe.viewController, animated: true)
+
     }
     
     func openAddScreen () {

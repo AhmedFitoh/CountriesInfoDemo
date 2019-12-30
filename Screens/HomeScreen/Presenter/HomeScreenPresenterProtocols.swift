@@ -1,8 +1,7 @@
 //
 //  HomeScreenPresenterProtocols.swift
-//  iOS-Viper-Architecture
 //
-//  Created by Nagwa on 12/27/19.
+//  Created by AhmedFitoh on 12/27/19.
 //  Copyright © 2019 AhmedFitoh. All rights reserved.
 //
 
@@ -21,7 +20,7 @@ protocol HomeScreenInteractorToPresenterProtocol: class {
 protocol HomeScreenViewToPresenterProtocol: class {
     func userDidPressAdd ()
     func viewWillAppear ()
-    func userDidDeleted (country: Country)
+    func userRequestedRemovalOf (country: Country)
     func userSelected (country: Country)
 
 }

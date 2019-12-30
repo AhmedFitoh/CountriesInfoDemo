@@ -1,8 +1,7 @@
 //
 //  HomeScreenPresenter.swift
-//  iOS-Viper-Architecture
 //
-//  Created by Nagwa on 12/27/19.
+//  Created by AhmedFitoh on 12/27/19.
 //  Copyright © 2019 AhmedFitoh. All rights reserved.
 //
 
@@ -70,7 +69,7 @@ extension HomeScreenPresenter: HomeScreenViewToPresenterProtocol {
         wireframe.openCountryDetailsScreen (with: country)
     }
     
-    func userDidDeleted(country: Country) {
+    func userRequestedRemovalOf(country: Country) {
         interactor.deleteCountry(country: country)
     }
     

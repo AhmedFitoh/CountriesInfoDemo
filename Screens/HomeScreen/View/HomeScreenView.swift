@@ -1,8 +1,7 @@
 //
 //  HomeScreenView.swift
-//  iOS-Viper-Architecture
 //
-//  Created by Nagwa on 12/27/19.
+//  Created by AhmedFitoh on 12/27/19.
 //  Copyright © 2019 AhmedFitoh. All rights reserved.
 //
 
@@ -62,6 +61,7 @@ extension HomeScreenView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellReuseIdentifier) ??  UITableViewCell ()
         cell.textLabel?.text = countriesList [indexPath.row].name
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -72,7 +72,7 @@ extension HomeScreenView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            presenter.userDidDeleted(country: countriesList [indexPath.row])
+            presenter.userRequestedRemovalOf(country: countriesList [indexPath.row])
             countriesList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
