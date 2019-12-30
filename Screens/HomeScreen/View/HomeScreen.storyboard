@@ -20,7 +20,23 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1bB-wu-Qrn">
+                                <rect key="frame" x="16" y="98" width="343" height="680"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="mVT-SP-d2g"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="OnP-H8-3sd"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="1bB-wu-Qrn" secondAttribute="trailing" id="OfZ-jj-8al"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1bB-wu-Qrn" secondAttribute="bottom" id="R5h-Sy-dfs"/>
+                            <constraint firstItem="1bB-wu-Qrn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Yap-VQ-PTT"/>
+                            <constraint firstItem="1bB-wu-Qrn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="eVZ-8i-c9D"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jji-uH-Yqx">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="9lV-Jt-s2s">
@@ -29,6 +45,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="countriesTableView" destination="1bB-wu-Qrn" id="iAY-9H-48a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -29,11 +29,24 @@ class HomeScreenPresenter {
 
 // MARK: - Interactor to Presenter Protocol
 extension HomeScreenPresenter: HomeScreenInteractorToPresenterProtocol {
+    func selectedCountriesRetrieved(list: Countries) {
+        view.showCountries(list: list)
+    }
+    
     
 }
 
 // MARK: - View to Presenter Protocol
 extension HomeScreenPresenter: HomeScreenViewToPresenterProtocol {
+    func userDidDeleted(country: Country) {
+        interactor.deleteCountry(country: country)
+    }
+    
+    func viewWillAppear() {
+        // refresh selected list
+        interactor.retriveSelectedCountries()
+    }
+    
     func userDidPressAdd() {
         wireframe.openAddScreen()
     }

@@ -8,5 +8,6 @@
 
 // VIPER Protocol for communication from Presenter to Interactor
 protocol HomeScreenPresenterToInteractorProtocol: class {
-    
+    func retriveSelectedCountries ()
+    func deleteCountry (country: Country)
 }

@@ -8,5 +8,6 @@
 
 // VIPER Protocol for communication from Presenter -> View
 protocol HomeScreenPresenterToViewProtocol: class {
-    
+    func showCountries (list: Countries)
+
 }

@@ -17,5 +17,13 @@ class HomeScreenInteractor {
 
 // MARK: - Presenter To Interactor Protocol
 extension HomeScreenInteractor: HomeScreenPresenterToInteractorProtocol {
+    func deleteCountry(country: Country) {
+        CacheManager().deleteCountry(country: country)
+    }
+    
+    func retriveSelectedCountries() {
+        presenter.selectedCountriesRetrieved(list:  CacheManager().retiveAllUserChoices() ?? [] )
+    }
+    
     
 }
