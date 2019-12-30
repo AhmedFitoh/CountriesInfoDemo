@@ -41,6 +41,11 @@ class HomeScreenView: UIViewController {
 
 // MARK: - Presenter to View Protocol
 extension HomeScreenView: HomeScreenPresenterToViewProtocol {
+    func addCountryOnTheTop(country: Country) {
+        countriesList.insert(country, at: 0)
+        countriesTableView.insertRows(at: [IndexPath(item: 0, section: 0)], with: .middle)
+    }
+    
     func showCountries(list: Countries) {
         countriesList = list
         countriesTableView.reloadData()
@@ -74,9 +79,7 @@ extension HomeScreenView: UITableViewDelegate {
     }
  
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        countriesList [indexPath.row].userChoice.toggle()
-//        tableView.reloadRows(at: [indexPath], with: .none)
-//        presenter.userSelected(country: countriesList [indexPath.row])
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.userSelected(country: countriesList [indexPath.row])
+    }
 }

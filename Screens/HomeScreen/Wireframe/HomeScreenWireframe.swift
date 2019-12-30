@@ -40,6 +40,10 @@ class HomeScreenWireframe {
 
 // MARK: - Presenter to Wireframe Protocol
 extension HomeScreenWireframe: HomeScreenPresenterToWireframeProtocol {
+    func openCountryDetailsScreen(with country: Country) {
+        
+    }
+    
     func openAddScreen () {
         let addScreenWireframe = AddScreenWireframe()
         viewController.navigationController?.pushViewController(addScreenWireframe.viewController, animated: true)

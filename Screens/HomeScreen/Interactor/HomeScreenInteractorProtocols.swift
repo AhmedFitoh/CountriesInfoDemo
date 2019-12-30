@@ -10,4 +10,5 @@
 protocol HomeScreenPresenterToInteractorProtocol: class {
     func retriveSelectedCountries ()
     func deleteCountry (country: Country)
+    func fetchDefaultCountry () 
 }

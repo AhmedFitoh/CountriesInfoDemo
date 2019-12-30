@@ -19,5 +19,6 @@ struct HomeScreenConstants {
 // VIPER Protocol for communication from Presenter -> Wireframe
 protocol HomeScreenPresenterToWireframeProtocol: class {
     func openAddScreen()
+    func openCountryDetailsScreen (with country: Country)
     
 }

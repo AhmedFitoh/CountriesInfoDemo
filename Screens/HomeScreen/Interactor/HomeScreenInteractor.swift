@@ -17,6 +17,10 @@ class HomeScreenInteractor {
 
 // MARK: - Presenter To Interactor Protocol
 extension HomeScreenInteractor: HomeScreenPresenterToInteractorProtocol {
+    func fetchDefaultCountry() {
+        presenter.defaultCountryFetched(country: Country(name: "Egypt", capital: "Cairo"))
+    }
+
     func deleteCountry(country: Country) {
         CacheManager().deleteCountry(country: country)
     }

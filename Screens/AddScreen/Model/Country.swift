@@ -22,7 +22,6 @@ class Country: NSManagedObject, Decodable {
     }
   
     required convenience init(from decoder: Decoder) throws {
-
         guard let context = decoder.userInfo[CodingUserInfoKey.context!] as? NSManagedObjectContext ,
             let entity = NSEntityDescription.entity(forEntityName: "Country", in: context) else {
                 fatalError("Failed to decode User")
@@ -33,6 +32,15 @@ class Country: NSManagedObject, Decodable {
         self.capital = try container.decodeIfPresent(String.self, forKey: .capital)
         self.userChoice = (try container.decodeIfPresent(Bool.self, forKey: .userChoice)) ?? false
 
+    }
+    
+    convenience init (name: String?, capital: String?) {
+        guard let entity = NSEntityDescription.entity(forEntityName: "Country", in: CacheManager.persistentContainer.viewContext) else {
+                fatalError("Failed to decode User")
+        }
+        self.init(entity: entity, insertInto: nil)
+        self.name = name
+        self.capital = capital
     }
     static func == (lhs: Country, rhs: Country) -> Bool {
         return lhs.name == rhs.name
