@@ -38,7 +38,13 @@ class HomeScreenPresenter: NSObject {
         
         if (CLLocationManager.locationServicesEnabled())
         {
-            setupLoactionManager()
+            let status = CLLocationManager.authorizationStatus()
+            switch status {
+            case .authorizedAlways, .authorizedWhenInUse:
+                setupLoactionManager()
+            default:
+                interactor.fetchDefaultCountry()
+            }
         } else {
             interactor.fetchDefaultCountry()
         }
