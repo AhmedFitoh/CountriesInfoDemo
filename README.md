@@ -3,6 +3,8 @@
 App offers offline caching , basic CRUD operations for CoreData.
 
  
+![Alt text](https://raw.githubusercontent.com/AhmedFitoh/CountriesInfoDemo/master/sample.gif)
+ 
 ### Features
 - VIPER.
 - CoreData.
