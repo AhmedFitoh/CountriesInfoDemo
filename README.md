@@ -1,4 +1,4 @@
-# Countries Info Demo
+# VIPER_Demo
  This is a demo for using VIPER design pattern , it uses "https://restcountries.eu" free API to fetch countries list.
 App offers offline caching , basic CRUD operations for CoreData.
 
